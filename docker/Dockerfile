@@ -16,4 +16,4 @@ RUN npm install
 EXPOSE 8080
 
 # Run container
-CMD ["npm", "splunk"]
+CMD ["npm", "start"]
