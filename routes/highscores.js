@@ -1,3 +1,7 @@
+//Splunk OTEL
+const opentelemetry = require('@opentelemetry/api');
+const tracer = opentelemetry.trace.getTracer('pacman-highscores');
+
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
@@ -13,6 +17,9 @@ router.use(function timeLog (req, res, next) {
 })
 
 router.get('/list', urlencodedParser, function(req, res, next) {
+    const span = tracer.startSpan('/list', { 'kind':opentelemetry.SpanKind.CLIENT });
+    pan.addEvent('Getting Highscores');
+    
     console.log('[GET /highscores/list]');
     Database.getDb(req.app, function(err, db) {
         if (err) {
@@ -34,8 +41,10 @@ router.get('/list', urlencodedParser, function(req, res, next) {
             });
 
             res.json(result);
+            span.setAttribute('results',result);
         });
     });
+    span.end();
 });
 
 // Accessed at /highscores
