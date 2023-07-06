@@ -1,13 +1,13 @@
 FROM node:boron
 
-MAINTAINER Ivan Font <ifont@redhat.com>
+MAINTAINER Christhian Bran
 
 # Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Clone game source code
-RUN git clone https://github.com/bran1501/pacman.git .
+RUN git clone https://github.com/bran1501/pacman-2.git .
 
 # Install app dependencies
 RUN npm install
@@ -16,4 +16,4 @@ RUN npm install
 EXPOSE 8080
 
 # Run container
-CMD ["npm", "start"]
+CMD ["npm", "splunk"]
