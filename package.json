@@ -2,7 +2,7 @@
   "name": "pacman",
   "version": "0.0.1",
   "description": "Pac-Man Node.js Game",
-  "author": "Christhian Bran",
+  "author": "Ivan Font <ivan@ivanfont.com>",
   "main": "bin/server.js",
   "scripts": {
     "start": "node .",
@@ -11,15 +11,12 @@
   },
   "license": "GPLv3",
   "dependencies": {
-    "@opentelemetry/instrumentation-express": "^0.32.4",
-    "@opentelemetry/instrumentation-http": "^0.40.0",
-    "@splunk/otel": "^2.2.2",
+    "@splunk/otel": "^2.5.0",
+    "@splunk/otel-web": "^0.16.5",
     "body-parser": "^1.17.1",
-    "express": "^4.18.2",
-    "http-server": "^14.1.1",
+    "express": "^4.14.1",
     "jade": "^1.11.0",
-    "mongodb": "^2.2.24",
-    "node-sass": "^9.0.0"
+    "mongodb": "^2.2.24"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
