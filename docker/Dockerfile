@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 RUN git clone https://github.com/bran1501/pacman-2.git .
 
 # Install app dependencies
-RUN /usr/bin/npm install
+RUN npm install
 
 # Expose port 8080
 EXPOSE 8080
