@@ -3,6 +3,20 @@
 <!--<html lang="en">-->
 <html lang="en" manifest="cache.manifest">
 <head>
+            <!-- SPLUNK RUM --> 
+<script src="https://cdn.signalfx.com/o11y-gdi-rum/v0.16.5/splunk-otel-web.js" crossorigin="anonymous"></script>
+<script>
+SplunkRum.init({
+realm: "us1",
+rumAccessToken: "d6-wDuFg3yRQPvsBeJ12MA",
+applicationName: "christhianb-pacman",
+deploymentEnvironment: "christhianb-pacman_prod",
+globalAttributes: {
+ 'enduser.id': 42,
+'enduser.role': 'admin',
+  }
+});
+</script>
     <meta charset="utf-8" />
     <title>Pac-Man</title>
     <link rel="stylesheet" href="style.css">
